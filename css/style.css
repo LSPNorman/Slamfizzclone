@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+/*Barra de Navegacao Inicio*/
+.stickyNavbar{
+    position: sticky;
+    top: 0;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    padding-top: 1rem;
+    z-index: 999;
+    transition-duration: 0.2s;
+    background-color: white;   
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.leftMenu{
+    margin-left: -1rem;
+}
+
+.spritzButton,.aboutButton, .recipesButton, .shopButton{
+    border: none;
+    background-color: transparent;
+    transition-duration: 200ms;
+    font-weight: 600;
+}
+
+
+.spritzButton:hover,.aboutButton:hover, .recipesButton:hover{
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.aboutButton a, .recipesButton a, .shopButton a, .viewAllButton a{
+    text-decoration: none;
+    color: black;
+}
+
+.title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    transition-duration: 200ms;
+}
+
+.title:hover{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.rightMenu{
+    margin-right: 1rem;
+}
+
+.rightMenu i{
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    transition-duration: 200ms;
+}
+
+.rightMenu i:hover{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.shopButton{
+    margin-left: 1rem;
+    border: solid 2px;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background-color: deeppink;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    transition-duration: 200ms;
+}
+
+.shopButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(0px, 0px);
+    cursor: pointer;
+}
+
+#hiddenMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 998;
+    background-color: white;
+}
+
+.hideHiddenMenu{
+    transform: translateY(-30rem);
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+
+.showHiddenMenu{   
+    transition-duration: 0.5s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.itemsMenu{
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+}
+
+.itemsMenu button{
+    border: none;
+    background-color: white;
+}
+
+.itemsSelect{
+    margin: 1.5rem;
+    display: block;
+    text-align: center;
+}
+
+.itemsSelect p{
+    font-weight: 600;
+}
+
+.itemsSelect img{
+    width: 10rem;
+    height: 15rem;
+    border: solid 2px;
+    border-radius: 4px;
+    border-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition-duration: 200ms;
+}
+
+.itemsSelect img:hover{
+    width: 11rem;
+    height: 16rem;
+    cursor: pointer;
+}
+
+#item1Select img{
+    background-image: url(../img/Grape.png);
+}
+
+#item1Select img:hover{
+    background-image: url(../img/Grape-hover.png);
+}
+
+#item2Select img{
+    background-image: url(../img/Raspberry.png);
+}
+
+#item2Select img:hover{
+    background-image: url(../img/Raspberry-hover.png);
+}
+
+#item3Select img{
+    background-image: url(../img/Peach.png);
+}
+
+#item3Select img:hover{
+    background-image: url(../img/Peach-hover.png);
+}
+
+#item4Select img{
+    background-image: url(../img/Lemon.png);
+}
+
+#item4Select img:hover{
+    background-image: url(../img/Lemon-hover.png);
+}
+
+#item5Select img{
+    background-image: url(../img/Cucumber.png);
+}
+
+#item5Select img:hover{
+    background-image: url(../img/Cucumber-hover.png);
+}
+
+#item6Select img{
+    background-image: url(../img/BloodOrange.png);
+}
+
+#item6Select img:hover{
+    background-image: url(../img/BloodOrange-Hover.png);
+}
+
+
+.viewAllButton{
+    width: 10rem;
+    height: 3rem;
+    background-color: deeppink;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition-duration: 200ms;
+    margin-bottom: 0.5rem;
+}
+
+.viewAllButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(0px, 0px);
+    cursor: pointer;
+}
+
+/*Barra de Navegacao Fim*/
+
+/*Comeco da Seccao de Recepcao*/
+
+.welcomeSection{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcomeLogo{
+    z-index: -2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18rem;
+    position: relative;
+    top: -25rem;
+    /*-webkit-text-stroke: 1px white;*/
+}
+
+.welcomeBall{
+    z-index: -1;
+    font-size: 1rem;
+    background-color: white;
+    border: solid 2px black;
+    position: absolute;
+    right: 1rem;
+    top: 6rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transform: rotate(30deg);
+}
+
+.welcomeRectangle{
+    z-index: -1;
+    font-size: 1rem;
+    background-color: deeppink;
+    border: solid 2px black;
+    position: absolute;
+    left: 2rem;
+    top: 35rem;
+    width: 12rem;
+    height: 5rem;
+    transform: rotate(-30deg);
+}
+
+.welcomeRectangle p{
+    margin: 10%;
+}
+
+.welcomeBall p{
+    margin: 25%;
+}
+
+.welcomeBall p, .welcomeRectangle p{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.welcomeImage{
+    width: 70rem;
+    height: 30rem;
+    z-index: -3;
+    position: absolute;
+    top: 15rem;
+    border: solid 2px black;
+    transform: translate(-20px, -20px);
+    box-shadow: 10px 10px 0 0 deeppink, 20px 20px 0 0 black;
+    transition-duration: 0.2s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/DR014_FLAT_LAY_440ML.png);
+}
+
+.welcomeShape{
+    height: 60rem;
+    width: 75rem;
+    z-index: -4;
+    position: absolute;
+    top: 0;
+    background-color: purple;
+    transform: rotate(-10deg);
+    border-radius: 15% 60% 35% 65%;
+}
+
+/*Fim da Seccao de Recepcao*/
+
+/*Comeco da Seccao de Beneficios*/
+
+.benefitsSection{
+    height: 30rem;
+    width: 100vw;
+    background-color: deeppink;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bloodOrangeImg{
+    position: absolute;
+    top: 55rem;
+    right: 2rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    z-index: 10;
+}
+
+.lemonImg{
+    position: absolute;
+    top: 70rem;
+    left: 2.5rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    z-index: 10;
+}
+
+.benefitsSection h2{
+    font-size: 3rem;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    margin-top: 5rem;
+}
+
+.benefitsSection p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: -1rem;
+}
+
+.shopFritzButton{
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background-color: white;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    transition-duration: 200ms;
+    margin-top: -0.5rem;
+}
+
+.shopFritzButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(0px, 0px);
+    cursor: pointer;
+}
+
+.benefitsIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -2rem;
+}
+
+.benefitsIcons .icon{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.benefitsIcons .icon i{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: solid 4px black;
+    background-color: purple;
+}
+
+/*Fim da Seccao de Beneficios*/
+/*Comeco da Seccao de Receitas*/
+.recipesSection{
+    height: 30rem;
+    width: 100vw;
+    background-color: purple;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -3.2rem;
+}
+
+.watermelonImg{
+    position: absolute;
+    top: 80rem;
+    right: 2rem;
+    width: 7.5rem;
+    z-index: 10;
+}
+
+.peachImg{
+    position: absolute;
+    top: 95rem;
+    left: 2.5rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    z-index: 10;
+}
+
+.recipesSection div{
+    height: 22rem;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-image: url(../img/recipes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 deeppink, 12px 12px 0 0 black;
+}
+
+.recipesSection div h2{
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 15rem;
+}
+
+.recipesSection div p{
+    font-size: 1rem;
+    font-weight: 600;
+    width: 25rem;
+    margin-left: 1rem;
+    margin-top: -1rem;
+}
+
+.viewRecipesButton{
+    border: solid 2px;
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background-color: deeppink;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    transition-duration: 200ms;
+    margin-top: -0.5rem;
+    margin-left: 1.8rem;
+}
+
+.viewRecipesButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(0px, 0px);
+    cursor: pointer;
+}
+
+/*Fim da Seccao de Receitas*/
+
+.merchSection{
+    height: 40rem;
+    width: 100vw;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.merchText{
+    margin-top: 5rem;
+}
+
+.merchText h2{
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    font-weight: 800;
+}
+
+.merchText p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.merchItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -4rem;
+    margin-left: 1rem;
+}
+
+.merchItems .merch{
+    width: 24.5rem;
+    height: 23rem;
+    margin: 1.5rem;
+}
+
+.merchItems .merch img{
+    width: 22rem;
+    height: 22rem;
+    object-fit: cover;
+    border: solid 2px black;
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    margin-bottom: 1rem;
+    transition: 0.2s;
+}
+
+.merchItems .merch img:hover{
+    transform: rotate(-10deg);
+    box-shadow: 0 0 0 0;
+    cursor: pointer;
+}
+
+.merchItems .merch p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cucumberImg{
+    position: absolute;
+    top: 108rem;
+    right: 2rem;
+    width: 7.5rem;
+    z-index: 10;
+}
+
+.raspberryImg{
+    position: absolute;
+    top: 135rem;
+    left: 2.5rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    z-index: 10;
+}
+
+/*Footer comeco*/
+footer{
+    height: 40rem;
+    width: 100vw;
+    background-color: black;
+    clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+footer h3{
+    color: deeppink;
+    font-size: 38rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*Footer fim*/
+
+/*login, SignUpOverlay and cart comeco*/
+#loginFrame, #signUpFrame, #cartFrame{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: -0.5rem;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+#loginFrame.showLoginFrame, #signUpFrame.showSignUpFrame, #cartFrame.showCartFrame{
+    display: block;
+}
+/*login, SignUpOverlay and cart fim*/

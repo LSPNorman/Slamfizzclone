@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+/*Barra de Navegacao Inicio*/
+.stickyNavbar{
+    position: sticky;
+    top: 0;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    padding-top: 1rem;
+    z-index: 999;
+    transition-duration: 0.2s;
+    background-color: white;   
+}
+
+.leftMenu{
+    margin-left: -1rem;
+}
+
+.spritzButton,.aboutButton, .recipesButton, .shopButton{
+    border: none;
+    background-color: transparent;
+    transition-duration: 200ms;
+    font-weight: 600;
+}
+
+
+.spritzButton:hover,.aboutButton:hover, .recipesButton:hover{
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.aboutButton a, .recipesButton a, .title a{
+    text-decoration: none;
+    color: black;
+}
+
+.title a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    transition-duration: 200ms;
+}
+
+.title:hover{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.rightMenu{
+    margin-right: 1rem;
+}
+
+.rightMenu i{
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    transition-duration: 200ms;
+}
+
+.rightMenu i:hover{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.shopButton{
+    margin-left: 1rem;
+    border: solid 2px;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background-color: deeppink;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    transition-duration: 200ms;
+}
+
+.shopButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(0px, 0px);
+    cursor: pointer;
+}
+
+/*Barra de Navegacao Fim*/
+/*Comeco da Seccao de Recepcao*/
+
+.welcomeSection{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcomeImage{
+    width: 70rem;
+    height: 20rem;
+    z-index: -3;
+    position: absolute;
+    top: 7.5rem;
+    border: solid 2px black;
+    transform: translate(-20px, -20px);
+    box-shadow: 10px 10px 0 0 deeppink, 20px 20px 0 0 black;
+    transition-duration: 0.2s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/DR014_FLAT_LAY_440ML.png);
+}
+
+.welcomeShape{
+    height: 60rem;
+    width: 75rem;
+    z-index: -4;
+    position: absolute;
+    top: 0;
+    background-color: purple;
+    transform: rotate(-10deg);
+    border-radius: 15% 60% 35% 65%;
+}
+
+/*Fim da Seccao de Recepcao*/
+/*Main Menu Comeco*/
+.mainMenu{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 25rem;
+}
+.menuItem{
+    height: 20rem;
+    width: 18rem;
+    margin: 1rem;
+    margin-right: -5rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItem img{
+    height: 18rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: solid 2px black;
+    box-shadow: 6px 6px 0 0 deeppink, 12px 12px 0 0 black;
+    margin-bottom: 1rem;
+    transition: 0.2s;
+}
+
+.menuItem img:hover{
+    transform: rotate(-10deg);
+    box-shadow: 0 0 0 0;
+    cursor: pointer;
+}
+
+.menuItem p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/*Main Menu fim*/
+/*Footer comeco*/
+footer{
+    height: 40rem;
+    width: 100vw;
+    background-color: black;
+    clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+footer h3{
+    color: deeppink;
+    font-size: 38rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*Footer fim*/
+
+/*login, SignUpOverlay and cart comeco*/
+#loginFrame, #signUpFrame, #cartFrame{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: -0.5rem;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+#loginFrame.showLoginFrame, #signUpFrame.showSignUpFrame, #cartFrame.showCartFrame{
+    display: block;
+}
+/*login, SignUpOverlay and cart fim*/

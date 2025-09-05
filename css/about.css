@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+/*Barra de Navegacao Inicio*/
+.stickyNavbar{
+    position: sticky;
+    top: 0;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    padding-top: 1rem;
+    z-index: 999;
+    transition-duration: 0.2s;
+    background-color: white;   
+}
+
+.leftMenu{
+    margin-left: -1rem;
+}
+
+.spritzButton,.aboutButton, .recipesButton, .shopButton{
+    border: none;
+    background-color: transparent;
+    transition-duration: 200ms;
+    font-weight: 600;
+}
+
+
+.spritzButton:hover,.aboutButton:hover, .recipesButton:hover{
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.aboutButton a, .recipesButton a, .shopButton a, .viewAllButton a, .title a{
+    text-decoration: none;
+    color: black;
+}
+
+.title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    transition-duration: 200ms;
+}
+
+.title:hover{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.rightMenu{
+    margin-right: 1rem;
+}
+
+.rightMenu i{
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    transition-duration: 200ms;
+}
+
+.rightMenu i:hover{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.shopButton{
+    margin-left: 1rem;
+    border: solid 2px;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background-color: deeppink;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    transition-duration: 200ms;
+}
+
+.shopButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(0px, 0px);
+    cursor: pointer;
+}
+
+#hiddenMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 990;
+    background-color: white;
+}
+
+.hideHiddenMenu{
+    transform: translateY(-30rem);
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+
+.showHiddenMenu{   
+    transition-duration: 0.5s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.itemsMenu{
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+}
+
+.itemsSelect{
+    margin: 1.5rem;
+    display: block;
+    text-align: center;
+}
+
+.itemsSelect p{
+    font-weight: 600;
+}
+
+.itemsSelect img{
+    width: 10rem;
+    height: 15rem;
+    border: solid 2px;
+    border-radius: 4px;
+    border-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition-duration: 200ms;
+}
+
+.itemsSelect img:hover{
+    width: 11rem;
+    height: 16rem;
+    cursor: pointer;
+}
+
+#item1Select img{
+    background-image: url(../img/Grape.png);
+}
+
+#item1Select img:hover{
+    background-image: url(../img/Grape-hover.png);
+}
+
+#item2Select img{
+    background-image: url(../img/Raspberry.png);
+}
+
+#item2Select img:hover{
+    background-image: url(../img/Raspberry-hover.png);
+}
+
+#item3Select img{
+    background-image: url(../img/Peach.png);
+}
+
+#item3Select img:hover{
+    background-image: url(../img/Peach-hover.png);
+}
+
+#item4Select img{
+    background-image: url(../img/Lemon.png);
+}
+
+#item4Select img:hover{
+    background-image: url(../img/Lemon-hover.png);
+}
+
+#item5Select img{
+    background-image: url(../img/Cucumber.png);
+}
+
+#item5Select img:hover{
+    background-image: url(../img/Cucumber-hover.png);
+}
+
+#item6Select img{
+    background-image: url(../img/BloodOrange.png);
+}
+
+#item6Select img:hover{
+    background-image: url(../img/BloodOrange-Hover.png);
+}
+
+
+.viewAllButton{
+    width: 10rem;
+    height: 3rem;
+    background-color: deeppink;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition-duration: 200ms;
+    margin-bottom: 0.5rem;
+}
+
+.viewAllButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(0px, 0px);
+    cursor: pointer;
+}
+
+/*Barra de Navegacao Fim*/
+/*Section1 Comeco*/
+.section1{
+    height: 40rem;
+    width: 100vw;
+    color: white;
+    clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0 92.5%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    background-image: url(../img/DR014_FLAT_LAY_440ML.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -10;
+}
+
+.section1 h1{
+    font-family: 'Montserrat';
+    font-size: 8rem;
+    font-weight: 800;
+    -webkit-text-stroke: 2px black;
+}
+/*Section1 Fim*/
+/*Section2 Comeco*/
+.section2{
+    height: 35rem;
+    width: 100vw;
+    background-color: deeppink;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slogan{
+    width: 25rem;
+    height: 12.5rem;
+    background-color: white;
+    border: solid 3px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.slogan h2{
+    margin-top: 3rem;
+    font-family: 'Montserrat';
+}
+
+.slogan p{
+    margin-top: -2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/*Section2 Fim*/
+/*Footer comeco*/
+footer{
+    height: 40rem;
+    width: 100vw;
+    background-color: black;
+    clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+footer h3{
+    color: deeppink;
+    font-size: 38rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*Footer fim*/
+
+/*login, SignUpOverlay and cart comeco*/
+#loginFrame, #signUpFrame, #cartFrame{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: -0.5rem;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+#loginFrame.showLoginFrame, #signUpFrame.showSignUpFrame, #cartFrame.showCartFrame{
+    display: block;
+}
+/*login, SignUpOverlay and cart fim*/

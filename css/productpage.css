@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.stickyNavbar{
+    position: sticky;
+    top: 0;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 5rem;
+    padding-top: 1rem;
+    z-index: 999;
+    transition-duration: 0.2s;
+    background-color: white;   
+}
+
+.leftMenu{
+    margin-left: -1rem;
+}
+
+
+.spritzButton,.aboutButton, .recipesButton, .shopButton{
+    border: none;
+    background-color: transparent;
+    transition-duration: 200ms;
+    font-weight: 600;
+}
+
+
+.spritzButton:hover,.aboutButton:hover, .recipesButton:hover{
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.aboutButton a, .recipesButton a, .shopButton a, .viewAllButton a{
+    text-decoration: none;
+    color: black;
+}
+
+.title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    transition-duration: 200ms;
+}
+
+.title:hover{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.rightMenu{
+    margin-right: 1rem;
+}
+
+.rightMenu i{
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    transition-duration: 200ms;
+}
+
+.rightMenu i:hover{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.shopButton{
+    margin-left: 1rem;
+    border: solid 2px;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background-color: deeppink;
+    border: solid 2px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    transition-duration: 200ms;
+}
+
+.shopButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(0px, 0px);
+    cursor: pointer;
+}
+
+
+
+/*Seccao Produto Comeco*/
+.productSection{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.leftDiv, .rightDiv{
+    width: 40rem;
+    height: 50rem;
+}
+
+.leftDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bigImg{
+    width: 40rem;
+    height: 30rem;
+    border: solid 2px black;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.smalImgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.smallImgs img{
+    width: 10rem;
+    height: 15rem;
+    margin: 1rem;
+    border: solid 2px black;
+    object-fit: cover;
+}
+
+.smallImgs img:hover{
+    border-style: dashed;
+    cursor: pointer;
+}
+
+.rightDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rightDiv .text{
+    margin-top: 1rem;
+}
+
+.rightDiv .text h1{
+    font-family: 'Montserrat';
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.rightDiv .text .price{
+    margin-top: -1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.rightDiv .text p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.rightDiv .buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10rem;
+    width: 40rem;
+}
+
+.rightDiv .buttons .packButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: inherit;
+    
+}
+
+.rightDiv .buttons .packButtons button{
+    flex-basis: 32%;
+    height: 3rem;
+    background-color: white;
+    border: solid 2px black;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.rightDiv .buttons .packButtons button:hover{
+    border-style: dashed;
+    cursor: pointer;
+}
+
+.rightDiv .buttons .addToCartButton, .buyButton{
+    width: 98.5%;
+    margin-top: 1rem;
+    height: 3rem;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: white;
+    border: solid 2px black;
+    box-shadow: 6px 6px 0 0 deeppink, 12px 12px 0 0 black;
+    transition-duration: 0.2s;
+}
+
+.rightDiv .buttons .addToCartButton:hover, .buyButton:hover{
+    box-shadow: 0 0 0 0 purple;
+    transform: translate(12px, 12px);
+    cursor: pointer;
+}
+
+.rightDiv .buttons .buyButton:hover{
+    background-color: deeppink;
+}
+
+.rightDiv .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -10rem;
+    width: 40rem;
+}
+
+.rightDiv .icon{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.rightDiv .icon i{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: solid 4px black;
+}
+/*Seccao Produto Fim*/
+
+/*Seccao Slogan comeco*/
+.sloganSection{
+    width: 100vw;
+    height: 30rem;
+    background-color: deeppink;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    display: flex;
+    align-items: center;
+}
+
+.sloganSection .centerText{
+    width: 80vw;
+}
+
+.sloganSection .centerText h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+/*Seccao Slogan fim*/
+.productInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.leftSlogan, .rightSlogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.middleImage{
+    flex-basis: 35%;
+    height: 60rem;
+}
+
+.middleImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.slogan{
+    width: 25rem;
+    height: 12.5rem;
+    background-color: white;
+    border: solid 3px black;
+    transform: translate(-12px, -12px);
+    box-shadow: 6px 6px 0 0 purple, 12px 12px 0 0 black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.slogan h2{
+    margin-top: 1rem;
+    font-family: 'Montserrat';
+    font-weight: 900;
+}
+
+.slogan p{
+    margin-top: -2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/*whats in the can comeco*/
+
+/*Whats in the can fim*/
+
+/*Footer comeco*/
+footer{
+    height: 40rem;
+    width: 100vw;
+    background-color: black;
+    clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+footer h3{
+    color: deeppink;
+    font-size: 38rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*Footer fim*/
+
+/*login, SignUpOverlay and cart comeco*/
+#loginFrame, #signUpFrame, #cartFrame{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: -0.5rem;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+#loginFrame.showLoginFrame, #signUpFrame.showSignUpFrame, #cartFrame.showCartFrame{
+    display: block;
+}
+/*login, SignUpOverlay and cart fim*/
